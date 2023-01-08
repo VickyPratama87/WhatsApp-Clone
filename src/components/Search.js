@@ -1,13 +1,13 @@
 import React from "react";
-import { AiOutlineSearch } from "react-icons/ai";
+import { VscSearch } from "react-icons/vsc";
 
 const Search = () => {
   return (
     <div className="relative flex items-center bg-[#051a1d] py-2">
-      <div className="absolute left-6 pl-1 text-gray-400">
-        <AiOutlineSearch className="" />
+      <div className="absolute right-4 pr-3 text-gray-400">
+        <VscSearch className="w-4" />
       </div>
-      <input type="search" placeholder="Search for friend" className="w-full pl-9 m-2 mx-4 rounded-[.4rem] p-1 bg-[#202C33]" />
+      <input type="search" placeholder="Search or start a new chat" className="w-full pl-3 m-2 mx-4 rounded-[.4rem] p-1.5 bg-[#202C33]" />
     </div>
   );
 };

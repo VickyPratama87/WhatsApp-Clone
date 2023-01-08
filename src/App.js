@@ -6,7 +6,7 @@ import Search from "./components/Search";
 function App() {
   return (
     <div className="flex sm:max-w-[100vw] md:mx-auto md:my-auto bg-[#051a1d]">
-      <div className="border-r border-gray-400">
+      <div className="border-r border-gray-600">
         <Navbar />
         <Search />
         <Contacts />

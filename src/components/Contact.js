@@ -1,30 +1,89 @@
 import React from "react";
+import profile from "../assets/profile.jpg";
+import profile1 from "../assets/profile1.jpg";
+import profile2 from "../assets/profile2.jpg";
+import profile3 from "../assets/profile3.jpg";
+import profile4 from "../assets/profile4.jpg";
+import profile5 from "../assets/profile5.jpg";
+import profile6 from "../assets/profile6.jpg";
+import profile7 from "../assets/profile7.jpg";
+import Contact from "./Contact";
+import { BsCheck2All } from "react-icons/bs";
 
-const Contact = ({ img, name, message, time, inbox, unread }) => {
+const Contacts = () => {
+  const contacts = [
+    {
+      img: profile,
+      name: "Amadora Qalesya",
+      message: "Java Script, Node JS, and React Js",
+      time: "19.22",
+      unread: <BsCheck2All className="text-gray-300" />,
+    },
+    {
+      img: profile1,
+      name: "Carlina Sofea",
+      message: "What's up donec mauris.",
+      time: "19.00",
+      inbox: "2",
+      css: "text-[#50CB93]",
+    },
+    {
+      img: profile2,
+      name: "Tevy Pratista",
+      message: "How are you donec mauris.",
+      time: "20.22",
+      inbox: "4",
+      css: "text-[#50CB93]",
+    },
+    {
+      img: profile3,
+      name: "Zena Swastika",
+      message: "Hi donec mauris.",
+      time: "20.22",
+      inbox: "1",
+      css: "text-[#50CB93]",
+    },
+    {
+      img: profile4,
+      name: "Felicity Zelene",
+      message: "Good Morning, donec mauris.",
+      time: "kemarin",
+      unread: <BsCheck2All className="text-gray-300" />,
+    },
+    {
+      img: profile5,
+      name: "Poppy Nevaeh",
+      message: "Lorem ipsum dolor Lorem ipsum dolor sit amet tincidunt senectus elit gravida dictum odio faucibus donec mauris Lorem ipsum dolor sit.",
+      time: "10.22",
+      inbox: "5",
+      css: "text-[#50CB93]",
+    },
+    {
+      img: profile6,
+      name: "Raissa Sunniva",
+      message: "What's up donec mauris.",
+      time: "00.00",
+      inbox: "1",
+      css: "text-[#50CB93]",
+    },
+    {
+      img: profile7,
+      name: "Qiana Eldora",
+      message: "How are you donec mauris.",
+      time: "kemarin",
+      unread: <BsCheck2All className="text-gray-300" />,
+    },
+  ];
+
   return (
-    <div className="overflow-hidden cursor-pointer">
-      <div className="flex justify-between py-2 bg-[#051a1d] px-3 border-b border-gray-400 hover:bg-[#2a454a] transition duration-0">
-        <div className="flex items-center pb-2">
-          <div className="flex w-12 h-12 overflow-hidden rounded-full">
-            <img src={img} alt="" className="object-cover w-full rounded-full hover:scale-110 duration-100 ease-out" />
-          </div>
-
-          <div className="pl-3">
-            <p className="font-semibold text-[18px] text-white">{name}</p>
-            <div className="">
-              {/* <p className="">{unread}</p> */}
-              <p className="text-gray-400 w-[20rem] md:w-[10rem] lg:w-[20rem] truncate">{message}</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-col h-full text-gray-400">
-          <p>{time}</p>
-          <div className="rounded-full bg-[#25D366] text-center text-black mt-3">{inbox}</div>
-        </div>
+    <div>
+      <div className="md:w-[20rem] lg:w-[30rem] md:px-2">
+        {contacts.map((contact) => (
+          <Contact img={contact.img} name={contact.name} message={contact.message} time={contact.time} inbox={contact.inbox} unread={contact.unread} css={contact.css} />
+        ))}
       </div>
     </div>
   );
 };
 
-export default Contact;
+export default Contacts;
